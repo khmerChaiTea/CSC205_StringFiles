@@ -10,19 +10,21 @@ namespace CSC205_StringFiles
     {
         public static void Main(string[] args)
         {
-            string str = "abcdefg";
+            string s = "Visual C#";
+            System.Console.WriteLine(s.Substring(7, 2));
+            // Output: "C#"
 
-            for (int i = 0; i < str.Length; i += 2) 
-            {
-                Console.WriteLine(str[i]);
-            }
-            Console.WriteLine();
+            System.Console.WriteLine(s.Replace("C#", "Basic"));
+            // Output: "Visual Basic Express"
 
-            foreach (char c in str)
-            {
-                Console.Write(c);
-            }
-            Console.WriteLine();
+            System.Console.WriteLine(s.ToUpper());
+            // Output: "VISUAL C#"
+
+            System.Console.WriteLine(s.Contains("C#"));
+            //Output: True
+
+            System.Console.WriteLine(s.Insert(0, "I like "));
+            //Output: I like Visual C#
         }
     }
 }
