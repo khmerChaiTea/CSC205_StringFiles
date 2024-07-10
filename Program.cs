@@ -1,31 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
-namespace CSC205_StringFiles
+namespace ThinkSharp
 {
-    public class Program
+    public class ListFile
     {
-        public static void Main(string[] args)
-        {
-            string str;
-            Console.WriteLine("Please enter your name:");
-            str = Console.ReadLine();
-
-            Console.WriteLine("Please enter your age (1-99):");
-            int age = 0;
-            age = Convert.ToInt32(Console.ReadLine());
-            Greeting(str, age);
+        public static void Main()
+        { //make sure words.txt is in the same folder as the .exe file
+            ProcessFile("words.txt");
         }
-        public static void Greeting(string name, int age)
+        private static void ProcessFile(string filename)
         {
-            Console.WriteLine("Hello " + name + "!");
-            if (age > 21)
-                Console.WriteLine("you can buy alcohol!");
-            else
-                Console.WriteLine("Sorry, you can't buy alcohol!");
+            string line;
+            int count = 1;
+            TextReader reader = new StreamReader(filename);
+            while (true)
+            {
+                line = reader.ReadLine();
+                if (line == null)
+                {
+                    break;
+                }
+                Console.WriteLine(count + ": " + line);
+                count++;
+            }
+            reader.Close();
         }
     }
 }
