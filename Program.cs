@@ -6,21 +6,38 @@ using System.Threading.Tasks;
 
 namespace CSC205_StringFiles
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            double num;
-            Console.WriteLine("Please enter a number: ");
-            string myStr = Console.ReadLine();
+            int a, b, c;
+            Console.WriteLine("Enter the first interger:");
+            a = Convert.ToInt32(Console.ReadLine());
 
-            // The Parse method
-            num = double.Parse(myStr);
-            Console.WriteLine("Double.Parse method result: " + num);
+            Console.WriteLine("Enter the second interger:");
+            b = Convert.ToInt32(Console.ReadLine());
 
-            // The Convert class
-            num = Convert.ToDouble(myStr);
-            Console.WriteLine("Convert.ToDouble method result: " + num);
+            Console.WriteLine("Enter the third interger:");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"The largest number is {LargestOfThree(a, b, c)}");
+        }
+        public static int LargestOfThree(int a, int b, int c)
+        {
+            int result;
+            if (a >= b && a >= c)
+            {
+                result = a;
+            }
+            else if (b >= c && b >= a)
+            {
+                result = b;
+            }
+            else
+            {
+                result = c;
+            }
+            return result;
         }
     }
 }
