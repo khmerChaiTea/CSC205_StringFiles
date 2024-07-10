@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace CSC205_StringFiles
 {
-    namespace ThinkSharp
+    public class Program
     {
-        public class BadString
+        static void Main(string[] args)
         {
-            public static void Main(string[] args)
+            string fruit = "banana";
+            int length = fruit.Length;
+            int count = 0;
+            int index = 0;
+            while (index < length)
             {
-                var s = "banana";
-                Console.WriteLine(s +" tail");
+                if (fruit[index] == 'a')
+                {
+                    count = count + 1;
+                }
+                index = index + 1;
             }
+            System.Console.WriteLine(count);
         }
     }
+
 }
