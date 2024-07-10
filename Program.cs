@@ -10,12 +10,17 @@ namespace CSC205_StringFiles
     {
         static void Main(string[] args)
         {
-            int num;
-            string myStr = "25";
-            num = int.Parse(myStr);
-            Console.WriteLine("int.Parse method result: " + num);
-            num = Convert.ToInt32(myStr);
-            Console.WriteLine("Convert.ToInt32 method result: " + num);
+            double num;
+            Console.WriteLine("Please enter a number: ");
+            string myStr = Console.ReadLine();
+
+            // The Parse method
+            num = double.Parse(myStr);
+            Console.WriteLine("Double.Parse method result: " + num);
+
+            // The Convert class
+            num = Convert.ToDouble(myStr);
+            Console.WriteLine("Convert.ToDouble method result: " + num);
         }
     }
 }
