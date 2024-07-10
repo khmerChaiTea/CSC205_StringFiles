@@ -11,18 +11,25 @@ namespace CSC205_StringFiles
         static void Main(string[] args)
         {
             string fruit = "banana";
-            int length = fruit.Length;
-            int count = 0;
-            int index = 0;
-            while (index < length)
+
+            int count = 0, index = 0;
+            while (index < fruit.Length)
             {
                 if (fruit[index] == 'a')
                 {
-                    count = count + 1;
+                    count ++;
                 }
-                index = index + 1;
+                index ++;
             }
-            System.Console.WriteLine(count);
+            Console.WriteLine(count);
+
+            count = 0;
+            foreach (var c in fruit) // use char for explicite
+            {
+                if (c == 'a')
+                    count++;
+            }
+            Console.WriteLine(count);
         }
     }
 
