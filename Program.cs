@@ -21,7 +21,7 @@ namespace CSC205_StringFiles
             }
             public static char GetLastLetter(string s)
             {
-                int index = s.Length; // WRONG!
+                int index = s.Length-1;
                 char c = s[index];
                 return c;
             }
