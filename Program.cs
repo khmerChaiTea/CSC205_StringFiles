@@ -13,7 +13,7 @@ namespace CSC205_StringFiles
             public static void Main(string[] args)
             {
                 var s = "banana";
-                Console.WriteLine(s.IndexOf("an", 2));
+                Console.WriteLine(s +" tail");
             }
         }
     }
