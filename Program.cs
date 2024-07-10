@@ -10,27 +10,22 @@ namespace CSC205_StringFiles
     {
         static void Main(string[] args)
         {
-            string fruit = "banana";
-
-            int count = 0, index = 0;
-            while (index < fruit.Length)
+            string name1 = "Alan Turing";
+            string name2 = "Ada Lovelace";
+            int flag = name1.CompareTo(name2);
+            if (flag == 0)
             {
-                if (fruit[index] == 'a')
-                {
-                    count ++;
-                }
-                index ++;
+                Console.WriteLine("The names are the same.");
             }
-            Console.WriteLine(count);
-
-            count = 0;
-            foreach (var c in fruit) // use char for explicite
+            else if (flag < 0)
             {
-                if (c == 'a')
-                    count++;
+                Console.WriteLine("name1 comes before name2.");
             }
-            Console.WriteLine(count);
+            else if (flag > 0)
+            {
+                Console.WriteLine("name2 comes before name1");
+            }
+            Console.WriteLine(flag);
         }
     }
-
 }
