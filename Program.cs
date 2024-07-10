@@ -12,18 +12,8 @@ namespace CSC205_StringFiles
         {
             public static void Main(string[] args)
             {
-                ProcessWord("abcdefg");
-            }
-            public static void ProcessWord(string s)
-            {
-                char c = GetLastLetter(s);
-                Console.WriteLine(c);
-            }
-            public static char GetLastLetter(string s)
-            {
-                int index = s.Length-1;
-                char c = s[index];
-                return c;
+                var s = "banana";
+                Console.WriteLine(s.IndexOf("an", 2));
             }
         }
     }
