@@ -12,7 +12,7 @@ namespace CSC205_StringFiles
         {
             public static void Main(string[] args)
             {
-                ProcessWord("banana");
+                ProcessWord("abcdefg");
             }
             public static void ProcessWord(string s)
             {
